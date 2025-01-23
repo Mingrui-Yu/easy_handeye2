@@ -9,7 +9,7 @@ def generate_launch_description():
 
     handeye_rqt_evaluator = Node(package='easy_handeye2', executable='rqt_evaluator.py',
                                   name='handeye_rqt_evaluator',
-                                  # arguments=['--ros-args', '--log-level', 'debug'],
+                                  arguments=["--force-discover"], # added by mingrui
                                   parameters=[{
                                       'name': LaunchConfiguration('name'),
                                   }])

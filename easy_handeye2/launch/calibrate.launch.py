@@ -32,7 +32,7 @@ def generate_launch_description():
 
     handeye_rqt_calibrator = Node(package='easy_handeye2', executable='rqt_calibrator.py',
                                   name='handeye_rqt_calibrator',
-                                  # arguments=['--ros-args', '--log-level', 'debug'],
+                                  arguments=["--force-discover"], # added by mingrui
                                   parameters=[{
                                       'name': LaunchConfiguration('name'),
                                       'calibration_type': LaunchConfiguration('calibration_type'),
